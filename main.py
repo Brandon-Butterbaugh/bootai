@@ -46,10 +46,13 @@ def generate_content(client, messages, verbose):
     if not response.function_calls:
         return response.text
     
+
+    
+
     for call in response.function_calls:
-        print(
-            f"Calling function: {call.name}({call.args})"
-        )
+        string = f"Calling function: {call.name}({call.args})"
+        print(string)
+        
 
 
 
